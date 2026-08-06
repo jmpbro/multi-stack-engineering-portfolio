@@ -7,6 +7,10 @@ body {
   color: #333;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*Header style */
 header {
   background: #a0522d;
@@ -30,7 +34,11 @@ header h2 {
 nav {
   background: #333;
   padding: 0.75rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   text-align: center;
+  position: sticky; /* nav will stay at the top when scrolling */
+  top: 0; /* tells it where to stick - at the top of the viewport */
+  z-index: 100; /* ensures nav stays above other content */
 }
 
 nav ul {
